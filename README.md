@@ -15,7 +15,8 @@ npm install react-element-transition --save
 ## Usage
 
 React Component:
-```
+
+```javascript
 import {ReactTransition} from "./components";
 import {useState} from "react";
 
@@ -39,7 +40,7 @@ Transition CSS
 <br>
 add in your styles file.
 
-```
+```css
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity .4s ease;
