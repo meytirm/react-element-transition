@@ -66,7 +66,7 @@ Here are the props that can be passed to the `<ReactTransition />` component:
 
 #### `children`
 
-- **Type:** `React.ReactNode`
+- **Type:** `ReactElement`
 - **Default Value:** `null`
 - **Description:** Nested content to be rendered inside the component. **Note:** It's recommended to always wrap children inside a `div`.
 
@@ -89,4 +89,5 @@ my project's simple transition effects draw inspiration from the powerful capabi
  
 The simplicity and effectiveness of Vue.js transitions have influenced the design of our basic transition features. We extend our appreciation to the Vue.js community for their powerful and versatile solutions.
 
+Special thanks to my friend [mehdi](https://github.com/meyt) who helped and support during the development of this project.
 
