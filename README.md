@@ -73,11 +73,6 @@ Here are the props that can be passed to the `<ReactTransition />` component:
 ## Contributing
 If you want to contribute to this project and make it better, your help is very welcome. Create an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
-
-
 ## Acknowledgments
 
 my project's simple transition effects draw inspiration from the powerful capabilities of Vue.js transitions.
