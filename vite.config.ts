@@ -1,4 +1,7 @@
-import {defineConfig, rollupVersion} from 'vite'
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
+import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import {resolve} from 'path'
 import dts from 'vite-plugin-dts'
@@ -24,4 +27,10 @@ export default defineConfig({
         emptyOutDir: true,
     },
     plugins: [react(), dts()],
+    test: {
+        globals: true,
+        environment: 'jsdom',
+        setupFiles: ['./src/setupTests.ts'],
+        pool: 'forks',
+    }
 })
