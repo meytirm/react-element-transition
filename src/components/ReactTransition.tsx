@@ -21,7 +21,6 @@ export const ReactTransition = forwardRef(
 
         const [isShow, setIsShow] = useState(value)
         const localeTransitionRef = useRef<HTMLDivElement | null>(null)
-        const timeoutRef = useRef<number>(0)
 
         const setRef = (node: HTMLDivElement) => {
             localeTransitionRef.current = node;
@@ -57,7 +56,7 @@ export const ReactTransition = forwardRef(
             const { current: transitionRef } = localeTransitionRef;
             if (!transitionRef) return;
 
-            timeoutRef.current = setTimeout(() => {
+            const timeout = setTimeout(() => {
                 if (transitionRef) {
                     const actionClass = value ? 'remove' : 'add';
                     transitionRef.classList[actionClass](`${name}-enter-to`);
@@ -65,7 +64,7 @@ export const ReactTransition = forwardRef(
                 }
             }, 0);
 
-            return () => clearTimeout(timeoutRef.current)
+            return () => clearTimeout(timeout)
         }, [value, name])
 
         return isShow ? transitionElement : ''
